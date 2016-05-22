@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"unicode/utf8"
 )
 
 func main() {
@@ -15,5 +16,5 @@ func main() {
 		str = scanner.Text()
 	}
 
-	fmt.Printf("%s has %d characters.\n", str, len(str))
+	fmt.Printf("%s has %d characters.\n", str, utf8.RuneCountInString(str))
 }
